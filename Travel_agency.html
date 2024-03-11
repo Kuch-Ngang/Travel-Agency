@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  
+  <style>
+    
+    /*  body */
+    
+    body {
+      background-image: url('/images/nick-night-FAGjDJZVRXs-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: #000000;
+    }
+
+    /* heading */
+    h1, h2, h3 {
+      color: #ffffff;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /*  paragraph */
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* link */
+    .nav-link {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      text-decoration: none;
+      color: rgb(199, 81, 7);
+    }
+
+    /*  button  */
+    .btn-custom {
+      background-color: #ff6600;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff4500;
+    }
+
+     /* navbar  */
+     .navbar {
+      background-color: #000000;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .custom-navbar-brand {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 24px;
+      margin-left: 20px;
+    }
+
+    .custom-navbar-nav {
+      margin-right: 20px;
+    }
+
+    .custom-navbar-nav .nav-link {
+      color: #ffffff;
+      font-weight: bold;
+      margin-right: 20px;
+      text-transform: uppercase;
+    }
+
+    .custom-navbar-nav .nav-link:hover {
+      color: #ff6600;
+    }
+
+
+    /* hero section */
+    .jumbotron {
+      background-image: url('hero-background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      padding: 200px 0; 
+      text-align: center;
+    }
+
+    /*  heading */
+    .display-4 h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* paragraph */
+    .lead {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    /*  button  */
+    .btn {
+      background-color: #ff6600;
+      color: #ffffff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff4500;
+    }
+
+
+
+
+    /* destination */
+   
+    .card {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+
+
+
+    /*  tours section */
+    .accordion {
+      padding: 80px 0;
+      background-color: #f5f5f5;
+    }
+
+    /* accordion */
+    .accordion-item {
+      background-color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .accordion-item .accordion-button {
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      box-shadow: none;
+    }
+
+    .accordion-item .accordion-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .accordion-collapse {
+      border-top: 1px solid #dddddd;
+    }
+
+    .accordion-collapse .accordion-body {
+      padding: 20px;
+      border-radius: 20%;
+    }
+
+    .accordion-collapse .accordion-body p {
+      margin-bottom: 20px;
+    }
+
+    .accordion-body a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .accordion-body a:hover {
+      text-decoration: none;
+    }
+
+
+     /*  contact form  */
+     .form {
+      padding: 80px 0;
+      background-color: #f5f5f5;
+    }
+
+    .form-control {
+      border-radius: 0;
+    }
+
+    .form-control:focus {
+      border-color: #ff6600;
+      box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .btn-send {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+
+    /*  footer */
+    .bg-light {
+      background-color: #333333;
+      color: #343232;
+      padding: 40px 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+     .list-inline {
+      color: #020000;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+   
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Travel Agency</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="display-4">Find Your Next Expedition</h1>
+      <p class="lead">Explore the world with our amazing travel packages.</p>
+      <a href="#" class="btn btn-primary btn-lg">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section class="container">
+    <div class="row">
+      <!-- Destination 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/images/IMG_9189.JPG" class="card-img-top" alt="Destination 1">
+          <div class="card-body">
+            <h5 class="card-title">PARIS</h5>
+            <p class="card-text">Experience the romance and charm of Paris, the City of Light. Marvel at iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum. Explore charming neighborhoods,and immerse yourself in the city's rich art and culture.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Destination 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/images/IMG_9188.JPG" class="card-img-top" alt="Destination 2">
+          <div class="card-body">
+            <h5 class="card-title">DUBAI</h5>
+            <p class="card-text">Explore the dynamic city of Dubai, known for its stunning architecture, luxury shopping, and vibrant culture. Visit iconic landmarks like the Burj Khalifa and the Palm Jumeirah, indulge in desert safaris, and enjoy world-class dining and entertainment.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Destination 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/images/IMG_9190.JPG" class="card-img-top" alt="Destination 3">
+          <div class="card-body">
+            <h5 class="card-title">NEW YORK</h5>
+            <p class="card-text">Experience the vibrant energy of New York City, home to iconic landmarks like Times Square, Central Park, and the Statue of Liberty. Explore world-class museums, enjoy Broadway shows, and savor diverse culinary delights in this bustling metropolis.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tours Section -->
+  <section class="container">
+    <div class="accordion" id="accordionExample">
+      <!-- Tour 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+             Package 1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Explore PARIS. <a href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Tour 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Package 2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Explore DUBAI . <a href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Tour 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Package 3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Explore NEW YORK. <a href="#">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="container">
+    <h2 class="text-center">Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="destination" class="form-label">Destination of Interest</label>
+        <input type="text" class="form-control" id="destination" placeholder="Enter destination">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3">
+    <div class="container">
+      <p>&copy; 2024 Travel Agency</p>
+      <!-- Social Media Icons -->
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="http//www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a href="http//www.fa-twitter.com"><i class="fab fa-twitter"></i></a></li>
+        <li class="list-inline-item"><a href="https//www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
